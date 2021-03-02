@@ -1,7 +1,6 @@
 package com.javaex.basic.c;
 
-//클래스 임포트는 
-//클래스 바깥쪽에서 입력해야한다.
+//클래스 임포트는 클래스 바깥쪽에서 입력해야한다.
 import java.util.Scanner;
 
 public class ConsoleEx2 {
@@ -36,22 +35,22 @@ public class ConsoleEx2 {
 	
 		
 
-//콘솔입력  -   pdf  75페이지 아래문제 풀어보기
-		//스캐너 불러주고 
-		//문자열 
-		//in
+//콘솔입력  - 75p 아래문제 풀어보기- 이름과 나이를 입력받아 출력하는 프로그램을 작성하세요
+	
+		//스캐너 불러주고 - //클래스 임포트는 클래스 바깥쪽에서 입력해야한다.  -> import java.util.Scanner;
+		
 		private static void consoleInputEx() {
-			//이름과 나이를 입력받아 출력하는 프로그램을 작성하세요
-			
-            Scanner scanner = new Scanner (System.in);  
+			 Scanner scanner = new Scanner (System.in);  //표준입력장치 (키보드)
             		System.out.print("이름은?");
             		String name = scanner.next(); //문자열 입력
             		System.out.print("나이는?");
-            		int age = scanner.nextInt();
+            		int age = scanner.nextInt(); //숫자 입력
             		System.out.println("당신의 이름은 " +name + "이고 나이는 "+ age + "입니다. ");
             		//자원을 사용한 후에는 반드시 !!!! 닫아주자
             		scanner.close();
-            		
+            	
+            	
+           
 			
 		
 	}

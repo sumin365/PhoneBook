@@ -8,13 +8,13 @@ public class LoopEx4 {//반복문에 관한 모든것
 		//whileEx01();
 		//whilegugudan(); //브레이크 포인트 
 //doWhileEx();
-//nfLoop();
+//infLoop();
 	//	forGugudan();
 	//	continueEx();
 	//	breakEx();
 	//	nestedFor();
-	//	nestedForStar();
-		sixRandom();
+		nestedForStar();
+	//	sixRandom();
 	}
 
 	
@@ -34,17 +34,20 @@ public class LoopEx4 {//반복문에 관한 모든것
 //p90예제풀이
 	private static void whilegugudan() {
 		Scanner scanner =new Scanner (System.in); //////////////////////다시보기===================================
-		int num = 1;//
 		System.out.print("단을 입력하세요:");
+		int num = 1;//
+		
 		int dan = scanner.nextInt();
-		while (num<=9) {//
+		while (num<=9) {
 			System.out.println(dan + "*" + num + "=" + (dan * num));
 			num++;
 		}
 		scanner.close();
 	}
-
-//프로그램의 흐름과 변수의 변화를 확인 : 디버그 작업 이라고 한다. ================================????????????????????
+	
+		
+	
+//프로그램의 흐름과 변수의 변화를 확인 : 디버그 작업 이라고 한다. ==============================
 //패키지   클라스   메인  매소드  해당 매소드로     
 	
 	
@@ -67,17 +70,18 @@ public class LoopEx4 {//반복문에 관한 모든것
 	}
 	
 	
-	
 	private static void infLoop() {
 		//while, do~while 의 경우 반복조건은 개발자가 책임
 		//반복조건이 true 일 경우 무한 루프에 빠진다.
 		//특별한 경우가 아니라면 무한루프는 피하도록 한다.
 		while (true) {
-			System.out.print("Press Terminate Button");
+			System.out.println("Press Terminate Button");
 			
 		}
 		
 	}
+	
+	
 	private static void forGugudan() {  //녹화를 못하므ㅡㅜㅜㅜㅜㅜ   점도 한번 찍어야 하느,ㄴ데 ?
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("단을 입력하세요 :");
@@ -87,8 +91,9 @@ public class LoopEx4 {//반복문에 관한 모든것
 		}
 		}
 	
-	
-	
+//==========================================================================================================	
+//반복의 횟수를 알수 있을 때 , 범위를 주어졌을 때 : for
+//반복의 횟수를 알 수 없을 때 , 법위를 주어지지 않았을 때 : while
 //p100 예제 풀이
 	private static void continueEx() {
 		//먼저 루프로 1~ 20 찍어내자  //2배수  3배수를 제외해보자
@@ -115,7 +120,7 @@ public class LoopEx4 {//반복문에 관한 모든것
 	private static void nestedFor() {
 		for(int dan = 2; dan <= 9 ; dan++) {
 			System.out.println(dan+"단");
-			//중첩 loop
+			//중첩 loop ======================================================================================
 			for (int num =1 ; num <= 9 ; num ++) {
 				System.out.println(dan+"*"+ num + "=" + (dan * num));
 			}
@@ -127,11 +132,11 @@ public class LoopEx4 {//반복문에 관한 모든것
 //101p - 아래 문제 풀이 	
 	private static void nestedForStar() {
 		int rowCount  = 5 ; //몇줄할지 설정
-		for (int row = 1 ; row <=5; row ++) {
-			for (int col = 1; col <= row; col ++) {
+		for (int row = 1 ; row <=rowCount; row ++) {  //row 행
+			for (int col = 1; col <= row; col ++) {   //col 열
 				System.out.print("*");
 			}
-			System.out.println();
+			System.out.println();//개행한다. 
 		}
 	}
 	
@@ -139,10 +144,11 @@ public class LoopEx4 {//반복문에 관한 모든것
 	
 	
 	
-	//103p 1~45 정수난수중 6개 출력
+//104p 1~45 정수난수중 6개 출력
 	private static void sixRandom() {
 		for (int i=1; i<=6; i++) {
 			System.out.println((int)(Math.random()*45)+1);
+			
 		}
 	}
 	
