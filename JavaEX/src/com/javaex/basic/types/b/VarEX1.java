@@ -1,4 +1,4 @@
-package com.javaex.basic.types1;
+package com.javaex.basic.types.b;
 
 //변수연습
 public class VarEX1 {

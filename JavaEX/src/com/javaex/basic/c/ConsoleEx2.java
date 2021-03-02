@@ -1,4 +1,4 @@
-package com.javaex.basic2;
+package com.javaex.basic.c;
 
 //클래스 임포트는 
 //클래스 바깥쪽에서 입력해야한다.

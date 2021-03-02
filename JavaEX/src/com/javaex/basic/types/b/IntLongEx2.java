@@ -1,4 +1,4 @@
-package com.javaex.basic.types1;
+package com.javaex.basic.types.b;
 //정수 타임 연습
 //바이트 쇼트 인티져 (인트)  롱
 public class IntLongEx2 {

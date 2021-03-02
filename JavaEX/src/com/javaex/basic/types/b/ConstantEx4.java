@@ -1,4 +1,4 @@
-package com.javaex.basic.types1;
+package com.javaex.basic.types.b;
 //상수 : 변하지 않는 수 
 //선언, 초기화 , 조회는 가능// 변경은 불가능
 //상수 사용시 : 코드의 가독성 높아짐 / 코드 변경 불가해서 안정성 높아짐 

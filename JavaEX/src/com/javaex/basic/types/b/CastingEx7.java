@@ -1,4 +1,4 @@
-package com.javaex.basic.types1;
+package com.javaex.basic.types.b;
 
 public class CastingEx7 {
 

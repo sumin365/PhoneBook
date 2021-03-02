@@ -1,4 +1,4 @@
-package com.javaex.basic.types1;
+package com.javaex.basic.types.b;
 //char(2바이트)
 //유니코드는 캐릭터 1글자
 public class CharEx5 {

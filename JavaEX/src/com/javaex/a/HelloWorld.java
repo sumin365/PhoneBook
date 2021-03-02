@@ -1,4 +1,4 @@
-package com.javaex0;
+package com.javaex.a;
 //주석 : 컴파일 되지 않음
 /*
  * 여러줄에서 컴파일

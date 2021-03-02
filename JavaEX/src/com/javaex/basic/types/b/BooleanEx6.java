@@ -1,4 +1,4 @@
-package com.javaex.basic.types1;
+package com.javaex.basic.types.b;
     //불린형
 	//조건의 결과 (참, 거짓)을 다루는 자료형
 	//값에 따라서 조건문, 제어문을 이용 흐름제어에 사용 

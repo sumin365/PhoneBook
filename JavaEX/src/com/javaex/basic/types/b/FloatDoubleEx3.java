@@ -1,4 +1,4 @@
-package com.javaex.basic.types1;
+package com.javaex.basic.types.b;
 //실수
 //float (4)   double (8)
 //정밀도를 포기하고 표현 범위를 넓힌 자료형

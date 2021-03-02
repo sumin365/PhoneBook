@@ -1,4 +1,4 @@
-package com.javaex.basic2;
+package com.javaex.basic.c;
 
 public class OperEx1 {
 
