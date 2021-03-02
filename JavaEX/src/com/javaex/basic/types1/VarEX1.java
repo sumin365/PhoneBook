@@ -1,7 +1,7 @@
-package com.javaex.basic.types;
+package com.javaex.basic.types1;
 
 //변수연습
-public class VarEX {
+public class VarEX1 {
 	public static void main(String[] args) {
 		//변수 식별자 규정
 		//문자 , 숫자, $, _ 조합으로 생성
