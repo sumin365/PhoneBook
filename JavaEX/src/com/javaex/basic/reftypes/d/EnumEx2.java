@@ -2,7 +2,7 @@ package com.javaex.basic.reftypes.d;
 
 public class EnumEx2 {
 	public static void main(String[] args) {
-	//	enumTest();
+		enumTest();
 	//	switchEx3();
 	//	enumTest2();
 		 
@@ -26,9 +26,10 @@ public class EnumEx2 {
 		for (int i =0; i< days.length; i++) {
 		    System.out.printf("%s(%d)%n",days[i].name(),
 										days[i].ordinal());
-//			String s = String.format("%s(%d)%n",days[i].name(),
-//					days[i].ordinal());
-//		========================================================================================?????????????질문	
+			String s = String.format("%s(%d)%n",days[i].name(),
+					days[i].ordinal());
+		    System.out.println(s);
+//		========================================================================================
 		}
 	}
 		
