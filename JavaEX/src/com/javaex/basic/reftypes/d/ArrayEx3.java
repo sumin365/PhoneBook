@@ -119,8 +119,8 @@ public class ArrayEx3 {
 	 private static void arrayCopySystem() {
 			int[] source= {1,2,3};
 			int target[] = new int [10];
-			System.arraycopy(source,0,  //원본 배열 
-					target, 0,
+			System.arraycopy(source,0,  //원본 배열 ,	복사 시작 위치
+					target, 0,   //	타겟 배열, 타겟 배열의 시작 인덱스
 					source.length);  //소스길이  3이라고 써도 되나 소스길이가 계속 변경되므로 이와 같이 작성하기 
 			for (int i = 0 ; i < target.length; i++) {
 				System.out.print(target[i]+"\t");
