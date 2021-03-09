@@ -1,7 +1,7 @@
 package com.javaex.api.a13;
 //04PPT-35~38p/69
 
-
+import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -23,8 +23,8 @@ public class DateEX {
 		System.out.println("현재 : "+ now.toString());             //어떤 거와 같은거지????  동영상 보기 =======================================
 		
 //	출력 포맷의 변경
-			DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);	//	포맷 정의
-			System.out.println("FULL:" + df.format(now));
+			DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);	//	포맷만 정의한 것 
+			System.out.println("FULL:" + df.format(now));                   //출력해라
 			df = DateFormat.getDateInstance(DateFormat.LONG);
 			System.out.println("LONG:" + df.format(now));
 			df = DateFormat.getDateInstance(DateFormat.MEDIUM);
@@ -51,7 +51,7 @@ public class DateEX {
 				now.get(Calendar.MONTH) + 1,	//	중요: 1월은 0
 				now.get(Calendar.DATE));
 		
-		//	년월일 정보를 알고 있을 때
+		//	년월일 정보를 알고 있을 때 2012.09.24일떄
 		custom.set(2012, 8, 24);	//	년, 월 - 1, 일
 		System.out.printf("custom: %d년 %d월 %d일%n", 
 				custom.get(Calendar.YEAR),
@@ -70,7 +70,7 @@ public class DateEX {
 		//	이 날은 무슨 요일일까?
 		//	Calendar.DAY_OF_WEEK : 1(일) ~ 7(토)
 		int dow = future.get(Calendar.DAY_OF_WEEK);	//	요일 정보
-		System.out.printf("요일:" + dow);
+		System.out.printf("요일:" + dow +"\n");
 		
 		String dowStr;
 		

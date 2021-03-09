@@ -1,12 +1,12 @@
 package com.javaex.api.stringclass.a12;
-//ppt04-21p/69
+//ppt04-21-23p/69
 
 public class StringEx {
 
 	public static void main(String[] args) {
 //	stringBasic();
-		//usefulMethods();
-		stringBufferEx();
+		usefulMethods();
+	//	stringBufferEx();
 		
 	}
 	private static void stringBasic() {
@@ -105,7 +105,7 @@ public class StringEx {
 		sb.insert(8, "my");
 		
 		//	문자열 치환: replace
-		sb.replace(8, 10, "your ");
+		sb.replace(8, 10, "your "); //10은 9까지 바꾸는 거다. 
 		 
 		System.out.println("최종 문자열:" + sb);	//	최종 출력때까지 새 객체가 생성되지 않음
 		
@@ -114,13 +114,21 @@ public class StringEx {
 		System.out.println("버퍼 조정:" + sb); //->버퍼 조정:This is yo
 		
 		//	메서드 체이닝 기법
-		String s = new StringBuffer("This")
-						.append(" is pencil")
-						.insert(8, "my")
-						.replace(8, 10, "your ")
-						.toString();
+		String s = new StringBuffer("This")        //StringBuffer형태
+						.append(" is pencil")      //StringBuffer형태
+						.insert(8, "my")           //StringBuffer형태
+						.replace(8, 10, "your ")   //StringBuffer형태
+						.toString();               //string형태
 		System.out.println("메서드 체이닝:" + s);  //->메서드 체이닝:This is your pencil
+
+		
+		
+		//메소드 체이닝 비법 또다른 예시 
+	String s2 = "I like Java";
+	s2.toUpperCase().charAt(5);
+	
+	System.out.println(s2.toUpperCase().charAt(5));
 	}
 		
-		//메소드 체이닝 비법 ===========================================================================================================동영상 9시 22분 정도 다시 보기 추가 하기 
+
 	}

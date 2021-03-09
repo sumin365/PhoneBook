@@ -1,5 +1,5 @@
 package com.javaex.api.a13;
-
+//ppt04-27-31p/69
 public class WrapperEx {
 
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class WrapperEx {
 			Integer i2 = Integer.valueOf("10");
 			Float f2 = Float.valueOf("3.14159f");
 			Boolean b2 = Boolean.valueOf("false");
-			//	파라미터로 전달된 문자열이 해당 타입으로 변환될 수 있는 형태의 문자열이어야 한다
+			//	파라미터로 전달된 문자열은("") 해당 타입으로 변환될 수 있는 형태의 문자열이어야 한다
 			
 	
 //			자동박싱이 지원
@@ -29,9 +29,9 @@ public class WrapperEx {
 			System.out.println(Integer.toBinaryString(28));	//	28을 2진수 형태의 문자열로 출력
 			System.out.println(Integer.toHexString(28));	//	28을 16진수 형태의 문자열로 출력
 			
-//			형변환 메서드들            //?형변환은 무슨말????????????=========================================================
+//			형변환 메서드들          
 			double d4 = i3.doubleValue();
-			System.out.println("형변환:" + d4);
+			System.out.println("형변환:" + d4); //->형변환:10.0
 			
 		
 		
@@ -45,7 +45,7 @@ public class WrapperEx {
 			System.out.println("i4 == i5 ? " + (i4 == i5));	//	false임을 주의
 			//	포장 클래스 == 포장 클래스 -> 두 객체의 주소를 비교한 것
 			
-			//	값의 비교를 위해서는 unboxing비교, equals 비교를 해야 한다
+			//	값의 비교를 위해서는 unboxing비교,또는  equals 비교를 해야 한다
 			System.out.println("값의 비교(언박싱): " + (i4.intValue() == i5.intValue()));
 			System.out.println("값의 비교(equals): " + i4.equals(i5));
 			

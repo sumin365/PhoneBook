@@ -1,7 +1,7 @@
 package com.javaex.api.generics.v1.a14;
 
 public class ObjectBox {
-  private Object content;
+	private Object content;
 	
 	public Object getContent() {
 		return content;

@@ -1,10 +1,11 @@
 package com.javaex.api.generics.v1.a14;
-
+//ppt04-43p/69
 public class IntBox {
 	//필드
 	Integer content;
 	
-
+    //생성자 는 기본생성자   =========================================기본생성자가 되면 뭐가 달라지지???????????????
+	
 	//getter/setter
 	
 	public Integer getContent() {
@@ -14,8 +15,8 @@ public class IntBox {
 	public void setContent(Integer content) {
 		this.content = content;
 	}
-	
-//	두개의 박스파일을 봤을 떄 데이터의 차이가 있다 리턴 타입  파라미터 타입 모두 integer
+	 
+//	두개의 박스파일을 봤을 떄 데이터/리턴 타입/  파라미터 타입/ 모두 integer
 //	이걸 가지고 확장을 해보자 
 //	
 //	중복 코드가 발생한다. 

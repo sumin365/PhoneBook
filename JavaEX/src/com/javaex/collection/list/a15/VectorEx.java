@@ -1,4 +1,5 @@
 package com.javaex.collection.list.a15;
+//ppt04-49-50p/69
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -41,29 +42,35 @@ public class VectorEx {
 		//	객체 삭제
 		System.out.println("v:" + v);
 		v.removeElement(7);	//	내부에서 7객체를 삭제
-		System.out.println("v:" + v);
+		System.out.println("v:" + v);             //인덱스 삭제는????????
 		
-		//	내부 객체를 출력
+		//	내부 객체를 출력 -1번쨰 방법 
 		for (int i = 0; i < v.size(); i++) {
 			Integer item = v.elementAt(i);
 			System.out.print(item + " ");
 		}
-		System.out.println();
+		System.out.println(); //개행해보자 ->1 2 3 4 5 6 7 8 9 10 11
 		
-		//	Enhanced for
+		//	Enhanced for -2번쨰 방법
 		for (Integer item: v) {
 			System.out.print(item + " ");
 		}
-		System.out.println();
+		System.out.println(); //개행해보자 ->1 2 3 4 5 6 7 8 9 10 11
 		
-		//	Vector -> Enumeration을 받아와서 순회: 권장 -> 메모리 접근 효율이 좋다
+		
+		
+		//3번쨰 방법- 	Vector -> Enumeration을 받아와서 순회: 권장 -> 메모리 접근 효율이 좋다
+		//배열은 바로 다음에 자료가 있기 때문에 위의 2가지 방법을 이용해도 무방
+		//하지만 collection framework의 대표적 벡터는 다르게하는게 낫다. 
+		//첫번쨰 요소를 뽑아낸뒤 Enumeration한테 물어본다.  뒤에 데이터가 있냐? 있으면 하나 뽑아내고 그다음으로 이동하는 형식이
+		
 		Enumeration<Integer> e = v.elements();
 		
-		while (e.hasMoreElements()) {	//	뒤에 담긴 객체가 더 있는가
-			Integer item = e.nextElement();	//	데이터를 꺼내고, 뒤로 이동
+		while (e.hasMoreElements()) {	//	뒤에 담긴 객체가 더 있는가라고 물어보는 것이다. 
+			Integer item = e.nextElement();	//그 다음에서야 데이터를 꺼내고,  Enumeration을 뒤로 이동시킨다. 
 			System.out.print(item + " ");
 		}
-		System.out.println();
+		System.out.println(); //개행해보자 ->1 2 3 4 5 6 7 8 9 10 11
 		
 		//	백터 비우기
 		v.clear();

@@ -1,27 +1,29 @@
-package com.javaex.api.generics.v2.a14;
+ package com.javaex.api.generics.v2.a14;
+//ppt04-43p/69
 
 public class BoxApp {
 
-	public static void main(String[] args) {
-            //		Generic으로 설계된 클래스는
-			//	new (인스턴스화) 할 때 내부 데이터 타입을 지정할 수 있다
-			//	Key타입이 String, Value타입이 Integer
-	       	GenericBox<String, Integer> intBox = new GenericBox<>();
-			intBox.setKey("Integer");
-//			intBox.setKey(123); //	들어갈 수 없다
-			intBox.setContent(2021);
-//			intBox.setContent("Java");	//	들어갈 수 없다
+		public static void main(String[] args) {
+//			Generic으로 설계된 클래스는
+				//	new (인스턴스화) 할 때 내부 데이터 타입을 지정할 수 있다
 			
-			//	값을 가져와 봅니다.
-			int retVal = intBox.getContent();	//	캐스팅 불필요
-			System.out.println("키: " + intBox.getKey() + ", 값:" + retVal);
-			
+				GenericBox<Integer> intBox = new GenericBox<>();	//	Integer 객체를 내부 데이터의 타입////어처피 이 제네릭 박스는 인티져만 담는다. 그래서 뒷부분은  new GenericBox<>();으로 써도된다. 해도 안해도 된다. 
+				GenericBox<String> strBox = new GenericBox<>();		//	내부 데이터를 String
+				
+				intBox.setContent(2021);	//	컴파일러가 내부에 담길 타입 체크
+//				intBox.setContent("Java");	//	컴파일러가 타입 체크를 할 수 있음 -> 안정성 확보
+				
+				strBox.setContent("Java");
+				
+				int retVal = intBox.getContent();	//	캐스팅 불필요
+				String retStr = strBox.getContent();
+				
+				System.out.println("intBox 내용물:" + retVal);
+				System.out.println("strBox 내용물:" + retStr);
+			}
+
 		}
 
-	}
-         //?????????????????
-		 //꼭지워햐 하는 것은 아니다. integer객체를 내부 데이터의 타입으로 지정할 수 있게 된다. 
-		//내부 데이터를 String 
-		
-		
-	
+  
+ 
+ 

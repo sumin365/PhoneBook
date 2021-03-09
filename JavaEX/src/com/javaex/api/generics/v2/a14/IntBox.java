@@ -1,5 +1,5 @@
 package com.javaex.api.generics.v2.a14;
-
+//ppt04-43p/69
 public class IntBox {
 //	필드
 	Integer content;
