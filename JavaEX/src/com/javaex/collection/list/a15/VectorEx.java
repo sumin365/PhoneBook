@@ -1,6 +1,6 @@
 package com.javaex.collection.list.a15;
 //ppt04-49-50p/69
-
+//ListEx + VectorEx +HashtableEx같이 보기 
 import java.util.Enumeration;
 import java.util.Vector;
 

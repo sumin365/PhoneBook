@@ -1,5 +1,5 @@
-package com.javaex.exceptions;
-
+package com.javaex.exceptions.a17;
+//ppt03-56-62p/62
 
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -8,26 +8,30 @@ import java.util.Scanner;
 public class ExceptionEx {
 
 	public static void main(String[] args) {
-//		arithExceptionEx();
-//		arrayExceptionEx();
-//		nullPointerExceptionEx();
-		throwExceptEx();
-		System.out.println("End of Code!");
+		arithExceptionEx();
+		arrayExceptionEx();
+	nullPointerExceptionEx();
+	throwExceptEx();
+		System.out.println("End of Code!");////메소드들이 다 끝난뒤 여기로  돌아온다. 
 	}
 	
-	private static void throwExceptEx() {
-		//	호출된 메서드 내에서 발생한 예외는 가급적
+	//ppt04-62-p/62
+	private static void throwExceptEx() {//         ==========================================================????????????????????????????20210309  140137 40분 
+		//	호출된 메서드 내에서 발생한 예외는 가급적                                                                        그리고 왜 결과가 뒤죽박죽나와??
 		//	호출한 메서드 내에서 예외처리를 해주는 것이 좋다
 		ThrowsExcept except = new ThrowsExcept();
-		//	checked 예외 처리 예제
+		
+		
+//<<<<<<<	checked 예외 처리 예제>>>>>>>>>>>
 //		try {
-//			except.executeChecked();	//	checked Exception
+//			except.executeChecked();	//	checked Exception 반드시 예외 처리 필요 (try든 throw를 이용하든 무조건 처리필수 )
 //		} catch (IOException e) {
 //			System.err.println("호출된 메서드에서 checked 예외 발생!");
 //			System.err.println("메시지:" + e.getMessage());
 //		}
 		
-		//	unchecked 예외 처리 예제
+		
+//<<<<<<<<<<<<<	unchecked 예외 처리 예제>>>>>>>>>>>>>> - //	호출된 메서드 내에서 발생한 예외를 이곳에서 위임 처리
 		try {
 //			except.executeRuntime();
 			except.divide(100, 0);
@@ -46,6 +50,11 @@ public class ExceptionEx {
 			System.out.println("예외 처리 완료!");
 		}
 	}
+	
+	
+	
+	
+	//ppt04-59p/69
 	private static void nullPointerExceptionEx() {
 		//	가장 흔하고, 가장 위험한 오류
 		String str = new String("Hello");
@@ -58,27 +67,27 @@ public class ExceptionEx {
 			System.err.println("널입니다!");
 		}
 	}
-	
+	//ppt04-59p/69
 	private static void arrayExceptionEx() {
 		int[] intArray = new int[] { 3, 6, 9 };
 		
 		try {
-			System.out.println(intArray[3]);	// ArrayIndexOutOfBoundsException
+			System.out.println(intArray[3]);	//예외:  ArrayIndexOutOfBoundsException
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.err.println("에러 메시지:" + e.getMessage());
 			System.err.println("발생한 예외:" + e.getClass().getSimpleName());
 		}
-		//	finally 블록은 없을 수도 있다
+		//	finally 블록은 없을 수도 있다 생략가능 
 	}
-	
+	//ppt04-56-p/69
 	private static void arithExceptionEx() {
 		//	키보드로부터 정수를 입력
 		//	100을 입력받은 수로 나눠 봅시다
 		double result = 0;
 		int num;
 		
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("정수를 입력하세요:");
+		Scanner scanner = new Scanner(System.in);  //->import
+		System.out.print("정수를 입력하세요:"); 
 		
 		try {
 			//	예외 발생 가능 코드
@@ -86,19 +95,17 @@ public class ExceptionEx {
 			result = 100 / num;
 		} catch (InputMismatchException e) {
 			System.err.println("정수가 아닙니다.");
-		} catch (ArithmeticException e) {
-			//	구체적인 예외를 위쪽에
+		} catch (ArithmeticException e) {//	구체적인 예외를 위쪽에
 			System.err.println("0으로는 나눌 수 없어요");
 			System.err.println("메시지:" + e.getMessage());
-		} catch (Exception e) {	//	모든 예외 처리를 위한 최상위 예외 클래스
-			//	구체적인 예외 처리 후 남은 예외들 
+		} catch (Exception e) {	//	모든 예외 처리를 위한 최상위 예외 클래스 ---->//	구체적인 예외 처리 후 남은 예외들을 이걸로 마무리~~~ 그럼 좋다.  
 			e.printStackTrace();	//	예외 코드 전체를 출력
 		} finally {
 			System.out.println("Finally");	//	예외 발생 여부에 관계 없이 항상 마지막에 
 		}
 		
 		System.out.println("결과:" + result);
-		scanner.close();
+		scanner.close();//필수
 	}
 
 }
